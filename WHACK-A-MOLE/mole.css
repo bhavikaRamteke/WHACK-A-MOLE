@@ -1,0 +1,46 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url(./mario-bg.jpg);
+    background-size: cover;/* Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
+
+}
+
+#board{
+    width: 540px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto; /*this will fix it to center*/
+
+    /* These two lines make sure our tile dives are going to be from left t0 right and top to bottom 
+        without filling outof the board */
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./soil.png");
+    background-size: cover;/*So that the image will resize it sell acording to the parent container without straching*/
+    border: 3px solid white;
+    border-radius: 25px;
+
+}
+
+#board div{
+    /* board = 540x540 , divide into 3x3 tile --> 180x180 per div*/
+    width: 180px;
+    height: 180px;
+    background-image: url(./pipe.png);
+    background-size: cover;
+}
+
+#board div img{
+    width: 100px;
+    height: 100px;
+
+    /* so that the image tag is not dragable */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
